@@ -1,4 +1,6 @@
-# README
+# Calendar React Backend
+
+Ruby on Rails api backend for calendar-react
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
