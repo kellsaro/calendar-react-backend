@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  appt_time: 2019-06-22 20:14:58
+  user: one
+
+two:
+  title: MyString
+  appt_time: 2019-06-22 20:14:58
+  user: two
