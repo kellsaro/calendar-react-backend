@@ -34,11 +34,11 @@ module Calreactapi
 
     config.middleware.use Rack::Cors do
       allow do
-        origins 'http://localhost:3000'
+        origins 'localhost:3000'
         resource '*',
         :headers => :any,
         :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-        :methods => [:get, :post, :patch, :put, :delete, :options]
+        :methods => [:get, :post, :patch, :put, :delete]
       end
     end
   end

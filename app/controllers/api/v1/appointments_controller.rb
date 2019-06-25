@@ -4,10 +4,10 @@ module Api
   module V1
     # AppointmentsController
     class AppointmentsController < ApplicationController
-      # before_action :authenticate_user!
-
+      before_action :authenticate_user!
+      
       def index
-        @appointments = Appointment.order('appt_time ASC')
+        @appointments = current_user.appointments.order('appt_time ASC')
         render json: Oj.to_json(@appointments)
       end
 
@@ -17,11 +17,9 @@ module Api
       end
 
       def create
-        @appointment = Appointment.new
+        @appointment = current_user.appointments.new
         @appointment.title = params[:appointment][:title]
         @appointment.appt_time = params[:appointment][:appt_time]
-
-        @appointment.user = User.first
 
         if @appointment.save
           render json: Oj.to_json(@appointment)
@@ -59,8 +57,8 @@ module Api
       end
 
       def find_appointment(id)
-        #current_user.appointments.find(id)
-        Appointment.find(id)
+        current_user.appointments.find(id)
+        #Appointment.find(id)
       end
     end
   end
