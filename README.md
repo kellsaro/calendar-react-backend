@@ -1,26 +1,28 @@
-# Calendar React Backend
+# Calreact-api
 
-Ruby on Rails api backend for calendar-react
+Ruby on Rails api backend for [calendar-react-frontend](https://github.com/kellsaro/calendar-rect-frontend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Requirements
+  
+  * You must have Ruby 2.6.* and Rails 5.2.3
 
-Things you may want to cover:
+* Instructions 
+  
+  * Clone or download this repo
 
-* Ruby version
+  * Go to the downloaded folder
 
-* System dependencies
+  * Run `bundle install` for installing all dependencies
+
+  * Run `rails db:migrate` for create the database tables
+
+  * Run `rails s -p 3001` for starting the server
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+  * The application is configured for accepting request from `http://localhost:3000` 
+  * You can change it in config/application.rb
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+...work in progress
